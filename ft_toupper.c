@@ -6,17 +6,17 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:11:29 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/16 12:42:54 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:50:45 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper (int c)
+int	ft_toupper(int c)
 {
-    if (!(c >= 'a' && c <= 'z'))
-        return (c);
-    else
-    {
-        c -= 32;
-        return (c);
-    }   
+	if (!(c >= 'a' && c <= 'z'))
+		return (c);
+	else
+	{
+		c -= 32;
+		return (c);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:44:07 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/15 16:54:29 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:51:35 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *temp_dest;
-	unsigned char *temp_src;
+	unsigned char	*temp_dest;
+	unsigned char	*temp_src;
+
 	if ((dst && src) == NULL)
 		return (dst);
 	temp_dest = (unsigned char *)dst;

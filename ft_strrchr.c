@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:22:22 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 10:29:21 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:47:58 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int i;
-	char d;
-	char *hold;
+	unsigned int	i;
+	char			d;
+	char			*hold;
 
 	d = (char)c;
 	i = 0;
