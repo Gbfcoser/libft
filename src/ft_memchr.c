@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:40:53 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:47:47 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:33:30 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,18 @@
 
 void	*ft_memchar(const void *s, int c, size_t n)
 {
-	char	cc;
-	char	ss;
+	char			cc;
+	char			*ss;
+	unsigned int	i;
 
 	cc = (unsigned char)c;
+	ss = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (ss[i] == cc)
+			return ((void *)&ss[i]);
+		i++;
+	}
+	return (NULL);
 }

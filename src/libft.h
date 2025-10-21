@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:50:50 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:47:40 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:25:48 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isdigit(c);
 int		ft_isascii(c);
 int		ft_isanum(c);
 int		ft_isalnum(c);
-void	ft_memmove(dst, src, len);
+void	*ft_memmove(dst, src, len);
+void	*ft_memchr(s, c, n);
 
 #endif
