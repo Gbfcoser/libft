@@ -6,16 +6,13 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 10:00:24 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/10 10:02:38 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/21 09:46:37 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-
-
+#include "libft.h"
 
 // int main(void)
 // {
-//    return (0); 
+//    return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:50:50 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/16 12:54:36 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/17 07:58:59 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 int ft_memset(b);
-void ft_memcpy(dest);
+void *ft_memcpy(dest);
 int ft_strlen(i);
 int ft_toupper(c);
 int ft_tolower(c);

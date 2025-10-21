@@ -6,24 +6,29 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:47:42 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/16 12:54:52 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/17 09:43:45 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
     int i;
-    i = 0;
-    while (src[i] != '\0')
+    int j;
+    
+    i = ft_strlen(src);
+    j = 0;
+    if (dstsize + 1 == i)
     {
-        dst[i] = src[i];
+        dst[j] = src[j];
         i++;
     }
-    dst[i] = '\0';
-    if (src[i] == dst[i])
-    return (dst);
+    else
+    {
+        dst[j] = dstsize - 1;
+    }
+    return (i);
 }
 
 // int main (void)
