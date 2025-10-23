@@ -5,21 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:46:46 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:51:27 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/14 18:18:44 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/14 18:40:02 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	memset(void *b, int c, size_t len)
+void *memset(void *b, int c, size_t len)
 {
-	unsigned char	var;
+    unsigned char *temp;
 
-	var = (unsigned char *)b;
-	while (var != len)
-	{
-		c = var;
-	}
-	return (b);
+    temp = (unsigned char *)b;
+    while (len > 0)
+    {
+        temp = c;
+        temp++;
+        len--;
+    }
+    return(b);
 }
