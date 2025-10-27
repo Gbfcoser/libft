@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:54:04 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 14:33:29 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:34:38 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*temp_src;
 	size_t			i;
 
-	if ((dst && src) == NULL)
+	if ((dst == (void *)0) && src == (void *)0)
 		return (dst);
 	temp_dest = (unsigned char *)dst;
 	temp_src = (unsigned char *)src;

@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 11:47:26 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:51:21 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/22 16:41:35 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/24 11:34:17 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*dup;
-	int		len;
+	size_t	i;
+	char	*ss;
 
-	len = 0;
 	i = 0;
-	while (src[len] != '\0')
-		len++;
-	dup = (char *)malloc(len + 1 * sizeof(char));
-	if (!dup)
+	if (!s)
 		return (NULL);
-	while (src[i] != '\0')
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	ss = ft_calloc(len + 1, sizeof(char));
+	if (!ss)
+		return (NULL);
+	while (i < len)
 	{
-		dup[i] = src[i];
+		ss[i] = s[start + i];
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (ss);
 }
 
-// int main(void)
+// int	main(void)
 // {
-//     char *string = "Teste";
-//     printf("%s\n", ft_strdup(string));
-//     free (ft_strdup(string));
-//     return (0);
+// 	ft_substr("Teste Com Catapimbas", 5, 10);
+// 	return (0);
 // }

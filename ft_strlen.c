@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 09:46:40 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 09:47:50 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/09 11:42:11 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/24 10:01:51 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_isalnum(int c)
+size_t	ft_strlen(const char *src)
 {
-	if (ft_isalpha || ft_isdigit)
-		return (2);
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
+
+// int main(void)
+// {
+//     char *str = "Teste Teste";
+//     printf("%d\n", ft_strlen(str));
+//     return (0);
+// }

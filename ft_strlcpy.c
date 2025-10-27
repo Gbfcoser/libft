@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 12:44:07 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:51:35 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/09 11:47:42 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/24 14:32:07 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char	*temp_dest;
-	unsigned char	*temp_src;
+	size_t	i;
+	size_t	j;
 
-	if ((dst && src) == NULL)
-		return (dst);
-	temp_dest = (unsigned char *)dst;
-	temp_src = (unsigned char *)src;
-	while (n > 0)
+	i = ft_strlen(src);
+	j = 0;
+	if (dstsize + 1 == i)
 	{
-		temp_dest = temp_src;
-		temp_dest++;
-		temp_src++;
-		n--;
+		dst[j] = src[j];
+		i++;
 	}
-	return (dst);
+	else
+	{
+		dst[j] = dstsize - 1;
+	}
+	return (i);
 }
+
+// int main (void)
+// {
+//     char *string = "Teste";
+//     char *cpied = "Taca";
+//     printf("Was %s\n Became %s\n", cpied, ft_strlcpy(cpied,string));
+//     return (0);
+// }

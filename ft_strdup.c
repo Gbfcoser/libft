@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 11:47:42 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/21 13:51:17 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/09 11:47:26 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/24 10:01:47 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-char	*ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *src)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	char	*dup;
+	int		len;
 
-	i = ft_strlen(src);
-	j = 0;
-	if (dstsize + 1 == i)
+	len = 0;
+	i = 0;
+	while (src[len] != '\0')
+		len++;
+	dup = (char *)malloc(len + 1 * sizeof(char));
+	if (!dup)
+		return (NULL);
+	while (src[i] != '\0')
 	{
-		dst[j] = src[j];
+		dup[i] = src[i];
 		i++;
 	}
-	else
-	{
-		dst[j] = dstsize - 1;
-	}
-	return (i);
+	dup[i] = '\0';
+	return (dup);
 }
 
-// int main (void)
+// int main(void)
 // {
 //     char *string = "Teste";
-//     char *cpied = "Taca";
-//     printf("Was %s\n Became %s\n", cpied, ft_strlcpy(cpied,string));
+//     printf("%s\n", ft_strdup(string));
+//     free (ft_strdup(string));
 //     return (0);
 // }

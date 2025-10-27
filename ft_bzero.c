@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 10:23:28 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/10 10:28:39 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/14 17:44:32 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/24 10:35:15 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-char *ft_strlcat(char *str)
+void	ft_bzero(void *s, size_t n)
 {
-    
+	char *aux;
+	aux = (char *)s;
+	while (n > 0)
+	{
+		*aux = 0;
+		aux++;
+		n--;
+	}
 }
