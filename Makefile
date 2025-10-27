@@ -6,7 +6,7 @@
 #    By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 18:09:38 by giborges          #+#    #+#              #
-#    Updated: 2025/10/27 11:53:05 by giborges         ###   ########.fr        #
+#    Updated: 2025/10/27 19:23:59 by giborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = srcs/ft_bzero.c srcs/ft_memset.c srcs/ft_atoi.c srcs/ft_calloc.c srcs/ft_isalnum.c srcs/ft_itoa.c srcs/ft_isalpha.c srcs/ft_isascii.c srcs/ft_isdigit.c srcs/ft_isprint.c srcs/ft_memchr.c srcs/ft_memcmp.c srcs/ft_memcpy.c srcs/ft_strchr.c srcs/ft_strdup.c srcs/ft_strlen.c srcs/ft_strjoin.c srcs/ft_strlcat.c srcs/ft_strlcpy.c srcs/ft_memmove.c
+SRC = ft_bzero.c ft_memset.c ft_atoi.c ft_calloc.c ft_isalnum.c ft_itoa.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_strchr.c ft_strdup.c ft_strlen.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_memmove.c
 
 OBJ = $(SRC:%.c=%.o)
 

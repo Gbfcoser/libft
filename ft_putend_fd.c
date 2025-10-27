@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putend_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 15:30:11 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/27 19:43:52 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/27 19:38:53 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/27 19:42:15 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (!(c >= 0 && c <= 127))
-	{
-		return (0);
-	}
-	else
-		return (1);
-}
+	int	i;
 
-// int main(void)
-// {
-//     printf("%d\n", ft_isacii('6'));
-//     printf("%d\n", ft_isacii(127756));
-// }
+	i = 0;
+	while (s[i])
+		write(fd, &s[i++], 1);
+	write(1, '\0', 1);
+}

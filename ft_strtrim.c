@@ -6,11 +6,11 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:35:54 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/27 10:55:49 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:28:18 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
 static int	trim(const char *set, char c);
 static char	*str(const char *s1, size_t start, size_t len);
@@ -46,8 +46,9 @@ static int	trim(const char *set, char c)
 
 static char	*str(const char *s1, size_t start, size_t len)
 {
-	unsigned char *str1;
-	size_t i;
+	unsigned char	*str1;
+	size_t			i;
+
 	if (len <= 0 || start >= ft_strlen(s1))
 		return (ft_strdup(""));
 	str1 = ft_calloc(len + 1, sizeof(char));
