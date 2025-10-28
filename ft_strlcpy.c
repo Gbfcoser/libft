@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:47:42 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/27 19:50:27 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/28 21:12:54 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	src_len;
+	size_t	i;
 
-	src_len = ft_strlen(src);
-	if (src_len + 1 == dstsize)
+	i = 0;
+	if (dstsize > 0)
 	{
-		ft_memcpy(dst, src, src_len + 1);
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	else if (dstsize != 0)
-	{
-		ft_memcpy(dst, src, dstsize - 1);
-	}
-	return (src_len);
+	while (src[i])
+		i++;
+	return (i);
 }
 
 // int main (void)

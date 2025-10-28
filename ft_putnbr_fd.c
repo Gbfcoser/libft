@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 09:31:30 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/28 13:19:39 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/28 21:39:54 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb;
+	long	nb;
 
-	nb = (long)n;
+	nb = n;
 	if (nb < 0)
 	{
-		write(fd, '-', 1);
+		write(1, "-", 1);
 		nb = -nb;
 	}
-	if (nb > 10)
+	if (nb >= 10)
 	{
 		nb *= 10;
-		write(fd, nb, 1);
+		write(fd, &nb, 1);
 	}
-	nb % 10 + 0;
-	write(fd, nb, 1);
+	nb = (nb % 10) + 0;
+	write(fd, &nb, 1);
 }

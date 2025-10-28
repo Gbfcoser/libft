@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:13:13 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/27 11:56:07 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/28 20:42:55 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	while (count * size > i)
 	{
-		tmp = 0;
+		tmp[i] = 0;
 		i++;
 	}
 	return (tmp);

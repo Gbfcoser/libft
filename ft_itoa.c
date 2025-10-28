@@ -5,13 +5,7 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 10:16:21 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/28 13:19:39 by giborges         ###   ########.fr       */
+/*   Created: 2025/10/28 16:09:10 by giborges          #+#    #+#             */
+/*   Updated: 2025/10/28 16:43:50 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-char	*ft_itoa(int n)
-{
-}
