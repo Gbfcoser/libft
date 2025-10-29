@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:50:50 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/28 21:35:34 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:48:20 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,8 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_itoa(int n);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int i, char c));
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
