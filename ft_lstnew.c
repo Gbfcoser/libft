@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:31:29 by giborges          #+#    #+#             */
-/*   Updated: 2025/11/03 11:37:22 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:13:56 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *element;
+	t_list	*element;
 
 	element = malloc(sizeof(t_list));
 	if (!element)
 		return (NULL);
-
 	element->content = content;
 	element->next = NULL;
 	return (element);

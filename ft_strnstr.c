@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:33:48 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/29 14:47:46 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:31:03 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			j++;
 			if (needle[j] == 0)
-				return ((char *)haystack + 1);
+				return ((char *)haystack + i);
 		}
 		i++;
 		j = 0;

@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:12:43 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/24 13:59:22 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:11:27 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_strjoin(const char *s1, const char *s2)
 
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
-	join = malloc((lens1 + 1) + (lens2 + 1));
+	join = malloc((lens1 + lens2 + 1));
 	i = 0;
 	j = 0;
 	if (!join)

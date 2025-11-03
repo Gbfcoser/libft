@@ -6,65 +6,68 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:09:10 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/30 14:46:10 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:04:52 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_d(int n);
-static void	put_minus(char *res, int *i, int minus);
+static size_t	ft_len(long a)
+{
+	size_t	len;
+
+	len = 0;
+	if (a < 0)
+	{
+		a = -a;
+		len++;
+	}
+	if (a == 0)
+		return (1);
+	while (a > 0)
+	{
+		a = a / 10;
+		len++;
+	}
+	return (len);
+}
+
+static char	*ft_tab0(void)
+{
+	char	*tab;
+
+	tab = (char *)malloc(sizeof(char) * 2);
+	if (!tab)
+		return (NULL);
+	tab[0] = '0';
+	tab[1] = '\0';
+	return (tab);
+}
 
 char	*ft_itoa(int n)
 {
-	long	nb;
-	int		i;
-	int		minus;
-	char	*res;
+	long	a;
+	char	*tab;
+	size_t	len;
 
-	i = 0;
-	minus = ((nb = n) < 0);
-	if (minus)
-		nb = -nb;
-	i = count_d(nb) + minus;
-	res = (char *)malloc(i + 1 * sizeof(char));
-	if (!res)
+	a = n;
+	if (a == 0)
+		return (ft_tab0());
+	len = ft_len(a);
+	tab = (char *)malloc(sizeof(char) * (len + 1));
+	if (!tab)
 		return (NULL);
-	res[i] = '\0';
-	while (i > 0)
+	tab[len] = '\0';
+	if (a < 0)
 	{
-		res[i] = (nb % 10) + '0';
-		nb /= 10;
-		if (nb == 0)
-		{
-			put_minus(res, &i, minus);
-			break ;
-		}
-		i--;
+		tab[0] = '-';
+		a = -a;
 	}
-	return (res);
-}
-
-static int	count_d(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n <= 0)
-		i++;
-	while (n != 0)
+	while (a > 0)
 	{
-		n /= 10;
-		i++;
+		len--;
+		tab[len] = (a % 10) + '0';
+		a = a / 10;
 	}
-	return (i);
-}
-
-static void	put_minus(char *res, int *i, int minus)
-{
-	if (minus && *i > 0)
-	{
-		(*i)--;
-		res[*i] = '-';
-	}
+	return (tab);
 }

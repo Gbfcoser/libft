@@ -6,19 +6,22 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:21:05 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/30 14:48:09 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:09:22 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strteri(char const *s, char (*f)(unsigned int i, char c))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned i;
+	unsigned int	i;
+
 	i = 0;
+	if (!f || !s)
+		return ;
 	while (s[i])
 	{
-		(*f)(i, s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

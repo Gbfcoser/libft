@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:38:53 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/28 21:40:32 by giborges         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:32:34 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(1, '\n', 1);
+	write(fd, "\n", 1);
 }
