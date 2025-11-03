@@ -6,7 +6,7 @@
 /*   By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:09:10 by giborges          #+#    #+#             */
-/*   Updated: 2025/10/29 13:26:44 by giborges         ###   ########.fr       */
+/*   Updated: 2025/10/30 14:46:10 by giborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 		nb /= 10;
 		if (nb == 0)
 		{
-			put_minus(res, i, minus);
+			put_minus(res, &i, minus);
 			break ;
 		}
 		i--;
@@ -62,7 +62,7 @@ static int	count_d(int n)
 
 static void	put_minus(char *res, int *i, int minus)
 {
-	if (minus && i > 0)
+	if (minus && *i > 0)
 	{
 		(*i)--;
 		res[*i] = '-';

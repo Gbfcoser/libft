@@ -6,7 +6,7 @@
 #    By: giborges <giborges@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 18:09:38 by giborges          #+#    #+#              #
-#    Updated: 2025/10/29 14:49:02 by giborges         ###   ########.fr        #
+#    Updated: 2025/11/03 11:40:09 by giborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ ft_memcpy.c ft_strchr.c ft_strdup.c ft_strlen.c ft_strjoin.c ft_strlcat.c \
 ft_strlcpy.c ft_memmove.c ft_tolower.c ft_toupper.c ft_substr.c \
 ft_strtrim.c ft_strncmp.c ft_strrchr.c ft_putstr_fd.c ft_putchar_fd.c\
 ft_putnbr_fd.c ft_split.c ft_strmapi.c ft_strnstr.c ft_striteri.c\
+ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstclear ft_lstdelone.c\
+ft_lstiter.c ft_lstlast.c ft_lstsize.c ft_lstmap.c \
 
 
 OBJ = $(SRC:%.c=%.o)
